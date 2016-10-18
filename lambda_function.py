@@ -20,17 +20,17 @@ except Exception as e:
 def downloadGoogleHomePage():
     # http://www.pythonforbeginners.com/python-on-the-web/how-to-use-urllib2-in-python/
     try:
-        googleIndex = urllib2.urlopen("www.google.com")
+        googleIndex = urllib2.urlopen("http://www.google.com")
     except urllib2.URLError, e:
         print(str(e))
-    output = open('google_index.html', 'wb')
+    output = open('/tmp/google_index.html', 'wb')
     output.write(googleIndex.read())
     output.close()
 
 
 def checkSqlVersion():
     cur = conn.cursor()
-    cur.execute('show version()')
+    cur.execute('select VERSION()')
     result = cur.fetchone()
     print str(result)
     cur.close()

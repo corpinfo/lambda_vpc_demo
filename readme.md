@@ -8,7 +8,7 @@ The purpose of these two tasks is to test internet connectivity of the Lambda Fu
 
 ## Preparing the demo
 1. Create a directory and download the content of this repo into the directory
-2. install the required Python modules to the directory `pip install -r requirements.txt -t .`
+2. install the required Python modules to the directory `pip install -r requirements.txt  `
 3. Update the rds_config.py with valid connection details
-4. zip all files ad folders `zip -r * lambda_package.zip`
+4. zip all files ad folders `zip -r lambda_package.zip *`
 4. upload the `lambda_package.zip` file to AWS Lambda
